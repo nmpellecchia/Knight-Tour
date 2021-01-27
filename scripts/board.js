@@ -16,12 +16,17 @@ export function drawBoard(boardSize) {
 			// dynamic styling
 			square.style.height = `${sqSize}rem`;
 			square.style.width = `${sqSize}rem`;
-			/* square.style.zIndex = 0; */
 			square.style.lineHeight = `${sqSize}rem`;
 			square.style.textAlign = 'center';
-			// Test only, remove
-			/* square.textContent = `${row}-${column}`; */
+
 			board.appendChild(square);
 		}
 	}
+}
+
+export function updateBoard(moveNumber, move) {
+	// Get the HTML square
+	const boardSquare = document.querySelector(`.sq${move[0]}-${move[1]}`);
+
+	boardSquare.textContent = moveNumber;
 }
