@@ -1,5 +1,8 @@
 import { updateBoard } from './board.js';
 
+// Flag value to stop the recursion if the user starts clicking while it's being executed
+let isRunning;
+
 export function startTour(boardSize, firstMove) {
 	// Generate a 2D array with the board length
 	const board = Array(boardSize)
@@ -12,7 +15,7 @@ export function startTour(boardSize, firstMove) {
 	getFirstMove(firstMove, board);
 	updateBoard(moveList.length, firstMove);
 	// Start the tour
-	return setTimeout(() => updateKnightTour(moveList, board), 500);
+	isRunning = setTimeout(() => updateKnightTour(moveList, board), 500);
 }
 
 function getFirstMove(firstMove, board) {
@@ -85,7 +88,9 @@ function updateKnightTour(moveList, board) {
 
 		// Check if a solution is found
 		// The timeout is only visual, can be removed without repercursions
-		if (setTimeout(() => updateKnightTour(moveList, board), 500)) {
+		if (
+			(isRunning = setTimeout(() => updateKnightTour(moveList, board), 500))
+		) {
 			return true;
 		}
 		//No solution was found, delete the movement and try the next one
@@ -110,4 +115,8 @@ function orderMovesByDegree(moves, board) {
 	});
 
 	return orderedMoves;
+}
+
+export function stopTour() {
+	clearTimeout(isRunning);
 }

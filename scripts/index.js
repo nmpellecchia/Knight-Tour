@@ -1,5 +1,5 @@
 import { drawBoard, setStartingPosition } from './board.js';
-import { startTour } from './warnsdoff-tour.js';
+import { startTour, stopTour } from './warnsdoff-tour.js';
 
 function initialize() {
 	let boardSize = 8; //This will come from user input in the future;
@@ -69,6 +69,7 @@ const $startButton = document.querySelector('.start');
 // Listen if the board size was changed by the user
 $selectors.addEventListener('submit', (e) => {
 	e.preventDefault();
+	stopTour();
 	// Convert str to int to avoid any error later
 	const intBoardSize = parseInt($boardSize.value);
 	//redraw the board
@@ -77,9 +78,10 @@ $selectors.addEventListener('submit', (e) => {
 });
 // change the starting position
 $board.addEventListener('click', (e) => {
+	stopTour();
 	// Mark the selected position on the document
 	setStartingPosition(e.target);
-	// Set the first move to the selected coordinates
+	// Get the coordinates and convert them from str to int to avoid any error
 	const strFirstMove = e.target.className.match(/\d+/g);
 	firstMove = strFirstMove.map((position) => {
 		return parseInt(position);
@@ -87,6 +89,8 @@ $board.addEventListener('click', (e) => {
 });
 // Start the tour
 $startButton.addEventListener('click', () => {
+	stopTour();
+	drawBoard(boardSize);
 	startTour(boardSize, firstMove);
 	console.log(boardSize);
 	console.log(firstMove);
