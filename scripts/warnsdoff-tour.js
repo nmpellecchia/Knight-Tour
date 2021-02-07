@@ -12,7 +12,7 @@ export function startTour(boardSize, firstMove) {
 	getFirstMove(firstMove, board);
 	updateBoard(moveList.length, firstMove);
 	// Start the tour
-	setTimeout(() => updateKnightTour(moveList, board), 500);
+	return setTimeout(() => updateKnightTour(moveList, board), 500);
 }
 
 function getFirstMove(firstMove, board) {
