@@ -10,8 +10,10 @@ body {
 }
 
 header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	width: 100%;
-	text-align: center;
 	margin: 0 0 0 0;
 	padding: 0;
 	background: #000;
@@ -19,19 +21,67 @@ header {
 }
 
 h1 {
-	margin: 0;
+	margin: 0 1rem;
 	padding: 0;
 	font-size: 1.3rem;
 }
 
 h2 {
-	margin: 0;
+	order: 3;
+	margin: 0 1rem;
 	padding: 0 0 0 0;
-	font-size: 0.8rem;
+	font-size: 1rem;
 	font-family: 'Times New Roman', Times, serif;
 }
 
 header::after {
+	order: 2;
+	display: block;
+	content: '';
+	padding: 0;
+	height: 4rem;
+	width: 45rem;
+	margin: 0 auto;
+	background: white;
+	border-radius: 10rem 10rem 0 0;
+}
+
+main {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+form {
+	display: flex;
+	justify-content: space-around;
+	height: 2.5rem;
+	margin: 1rem 0;
+}
+
+input[type='number'] {
+	width: 25rem;
+	border-color: #bababa;
+	border-style: solid;
+	border-width: 0 0 2px 0;
+	font-size: 1.2rem;
+	font-family: Helvetica, sans-serif;
+}
+
+input[type='button'] {
+	background: rgb(73, 73, 73);
+	border: none;
+	padding: 0.7rem;
+	border-radius: 7px;
+	color: white;
+	text-transform: uppercase;
+}
+
+/* Remove arrows from input */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
 	display: block;
 	content: '';
 	padding: 0;
@@ -44,4 +94,11 @@ header::after {
 
 .chessboard {
 	display: grid;
+	justify-self: center;
+	margin: 1rem;
+	border: 1px solid #242424;
+}
+
+#selected {
+	background: #b96666;
 }
