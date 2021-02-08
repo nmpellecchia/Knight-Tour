@@ -1,3 +1,5 @@
+import { updateBoard } from './board.js';
+
 export function startTour(boardSize, firstMove) {
 	// Generate a 2D array with the board length
 	const board = Array(boardSize)
@@ -8,7 +10,7 @@ export function startTour(boardSize, firstMove) {
 	moveList.push(firstMove);
 	//Update the board
 	getFirstMove(firstMove, board);
-	updateVisualBoard(moveList.length, firstMove);
+	updateBoard(moveList.length, firstMove);
 	// Start the tour
 	setTimeout(() => updateKnightTour(moveList, board), 500);
 }
@@ -79,10 +81,10 @@ function updateKnightTour(moveList, board) {
 
 		moveList.push(currentMove);
 		board[currentMove[0]][currentMove[1]] = moveList.length;
-		updateVisualBoard(moveList.length, currentMove);
+		updateBoard(moveList.length, currentMove);
 
 		// Check if a solution is found
-		// The timeout is for visualization only,
+		// The timeout is only visual, can be removed without repercursions
 		if (setTimeout(() => updateKnightTour(moveList, board), 500)) {
 			return true;
 		}
@@ -108,11 +110,4 @@ function orderMovesByDegree(moves, board) {
 	});
 
 	return orderedMoves;
-}
-
-function updateVisualBoard(moveNumber, move) {
-	// Get the HTML square
-	const $boardSquare = document.querySelector(`.sq${move[0]}-${move[1]}`);
-
-	$boardSquare.textContent = moveNumber;
 }
