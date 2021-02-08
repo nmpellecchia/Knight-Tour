@@ -1,6 +1,9 @@
-export function drawBoard(boardSize) {
+function drawBoard(boardSize) {
 	const board = document.querySelector('.chessboard');
 	const sqSize = 3;
+	//Remove all childs from the board, if not will cause display errors
+	eraseBoard(board);
+
 	//Styling the board so it has the correct shape
 	board.style.gridTemplateColumns = `repeat(${boardSize}, ${sqSize}rem)`;
 	// Generate the board
@@ -24,9 +27,25 @@ export function drawBoard(boardSize) {
 	}
 }
 
-export function updateBoard(moveNumber, move) {
+function updateBoard(moveNumber, move) {
 	// Get the HTML square
 	const boardSquare = document.querySelector(`.sq${move[0]}-${move[1]}`);
 
 	boardSquare.textContent = moveNumber;
 }
+
+function eraseBoard(board) {
+	while (board.firstChild) {
+		board.removeChild(board.firstChild);
+	}
+}
+
+function setStartingPosition(newPosition) {
+	const previousPosition = document.querySelector('#selected');
+	// Deselect the previous position
+	previousPosition ? previousPosition.removeAttribute('id') : '';
+	// Select the new one
+	newPosition.id = 'selected';
+}
+
+export { drawBoard, updateBoard, setStartingPosition };
