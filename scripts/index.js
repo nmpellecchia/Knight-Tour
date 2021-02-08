@@ -1,58 +1,12 @@
 import { drawBoard, setStartingPosition } from './board.js';
 import { startTour, stopTour } from './warnsdoff-tour.js';
 
+// Refactor this file
 function initialize() {
-	let boardSize = 8; //This will come from user input in the future;
-	let firstMove = [0, 0]; // This could be target from click on the board??
+	let boardSize = 8;
 
 	drawBoard(boardSize);
-
-	/* changeBoardSize(boardSize);
-	changeStartingPosition(firstMove); */
-
-	/* startTour(boardSize, firstMove); */
-
-	/* const startButton = document.querySelector('.start');
-	startButton.addEventListener('click', () => {
-		console.log(boardSize);
-		console.log(firstMove);
-		startTour(boardSize, firstMove);
-	}); */
 }
-/* 
-function changeBoardSize(boardSize) {
-	// Select the full form to be able of detect a submit
-	const selectors = document.querySelector('.selectors');
-	const newBoardSize = document.querySelector('.board-size');
-
-	selectors.addEventListener('submit', (e) => {
-		e.preventDefault();
-		// Convert str to int to avoid any error later
-		const intBoardSize = parseInt(newBoardSize.value);
-		//redraw the board
-		drawBoard(intBoardSize);
-		// Return the new value
-		boardSize = intBoardSize;
-		console.log(boardSize);
-
-		return boardSize;
-	});
-}
-
-function changeStartingPosition(firstMove) {
-	const board = document.querySelector('.chessboard');
-
-	board.addEventListener('click', (e) => {
-		// Mark the selected position on the document
-		setStartingPosition(e.target);
-		// Set the first move to the selected coordinates
-		const newFirstMove = e.target.className.match(/\d+/g);
-		firstMove = newFirstMove;
-
-		console.log(firstMove);
-		return firstMove;
-	});
-} */
 
 initialize();
 //Declare the default moves in case the user doesn't change anything
@@ -89,7 +43,9 @@ $board.addEventListener('click', (e) => {
 });
 // Start the tour
 $startButton.addEventListener('click', () => {
+	//In case a tour was already executing
 	stopTour();
+	//Redraw the board to clear all squares if a tour was done before
 	drawBoard(boardSize);
 	startTour(boardSize, firstMove);
 	console.log(boardSize);
