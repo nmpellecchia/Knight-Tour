@@ -1,14 +1,13 @@
 body {
-	height: 100%;
-	width: 100%;
-	padding: 0;
-	margin: 0;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	display: grid;
-	grid-template-columns: 1fr;
-	justify-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background: #050403;
+  color: #ffeccc;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
+/*
 header {
 	display: flex;
 	justify-content: space-between;
@@ -76,10 +75,10 @@ input[type='submit'] {
 	border-radius: 7px;
 	color: white;
 	text-transform: uppercase;
-}
+} */
 
 /* Remove arrows from input */
-input::-webkit-outer-spin-button,
+/* input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
 	-webkit-appearance: none;
 	margin: 0;
@@ -91,14 +90,55 @@ input::-webkit-inner-spin-button {
 	margin: 0 auto;
 	background: white;
 	border-radius: 5rem 5rem 0 0;
+} */
+
+/* Generic styles */
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
 }
 
+/* class and id styling */
+
+.bg-img {
+  background-image: url(./img/chessboard-bg.jpeg);
+  width: auto;
+  height: 100%;
+  padding: 2rem;
+  background-position: center;
+  background-size: cover;
+  filter: grayscale(100%);
+}
+
+nav > ul {
+  background: #2b2a25;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.9rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  text-align: center;
+  padding: 0 0.3rem;
+}
+
+li > a {
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+}
+
+/* don't touch this */
 .chessboard {
-	display: grid;
-	justify-self: center;
-	margin: 1rem;
+  display: grid;
+  justify-self: center;
+  margin: 1rem;
 }
 
 #selected {
-	background-color: #b96666 !important;
+  background-color: #b96666 !important;
 }
