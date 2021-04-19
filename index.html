@@ -1,32 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="style.css" />
-		<title>Document</title>
-	</head>
-	<body>
-		<header>
-			<h1>Knight's Tour</h1>
-			<h2>Using Warnsdoff's rule</h2>
-		</header>
-		<main>
-			<form class="selectors">
-				<input
-					type="number"
-					class="board-size"
-					placeholder="Board Size"
-					min="5"
-					max="20"
-				/>
-				<input type="submit" class="set-size" value="Set size" />
-				<input type="button" class="start" value="Start Tour" />
-			</form>
-			<div class="chessboard"></div>
-		</main>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Knight Tour</title>
+  </head>
+  <body>
+    <header>
+      <div class="bg-img">
+        <h1>Knight's Tour</h1>
+        <h2>Using Warnsdoff's rule</h2>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">♞</a></li>
+          <li><a href="#knight-tour-explanation">What's a knight tour</a></li>
+          <li><a href="#warnsdoff-rule-explanation">Warnsdoff's rule</a></li>
+          <li><a href="#how-to-use">How to use</a></li>
+          <li><a href="#interactive-knight-tour">Try it</a></li>
+        </ul>
+      </nav>
+    </header>
+    <article id="knight-tour-explanation">
+      <div class="title">
+        <h2 class="title-txt">What's a Knight Tour</h2>
+        <svg viewbox="0 0 12 5">
+          <path
+            d="M0 0Q0 2 2.097 2.01L5.99 1.995C7.2502 1.9538 8.1795 1.4701 9.853 1.948Q11.212 2.226 11.382 3.88V5Q11.815 3.787 11.568 2.937Q11.274 2.118 10.146 1.562Q8.9815 1.1646 6.88 1.457Q4.397 1.686 2.081 1.608Q.54 1.686.133.349ZM10.963 3.442 10.53 4.076 9.996 3.434 10.522 2.94Z"
+          />
+        </svg>
+      </div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa eius,
+        eveniet, tempora aspernatur minima nam, quis a eaque commodi dolores
+        numquam dignissimos voluptates adipisci inventore voluptatem reiciendis
+        eos vero! Numquam!
+      </p>
+    </article>
+    <article id="warnsdoff-rule-explanation">
+      <div class="title">
+        <h2 class="title-txt">Warnsdoff's rule</h2>
+        <svg viewbox="0 0 12 5">
+          <path
+            d="M0 0Q0 2 2.097 2.01L5.99 1.995C7.2502 1.9538 8.1795 1.4701 9.853 1.948Q11.212 2.226 11.382 3.88V5Q11.815 3.787 11.568 2.937Q11.274 2.118 10.146 1.562Q8.9815 1.1646 6.88 1.457Q4.397 1.686 2.081 1.608Q.54 1.686.133.349ZM10.963 3.442 10.53 4.076 9.996 3.434 10.522 2.94Z"
+          />
+        </svg>
+      </div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod explicabo
+        earum commodi dignissimos eaque ipsum nemo veniam, consequatur excepturi
+        a praesentium similique, sit aut distinctio sed totam. Laudantium, omnis
+        vitae?
+      </p>
+    </article>
+    <article id="how-to-use">
+      <div class="title">
+        <h2 class="title-txt">How to use</h2>
+        <svg viewbox="0 0 12 5">
+          <path
+            d="M0 0Q0 2 2.097 2.01L5.99 1.995C7.2502 1.9538 8.1795 1.4701 9.853 1.948Q11.212 2.226 11.382 3.88V5Q11.815 3.787 11.568 2.937Q11.274 2.118 10.146 1.562Q8.9815 1.1646 6.88 1.457Q4.397 1.686 2.081 1.608Q.54 1.686.133.349ZM10.963 3.442 10.53 4.076 9.996 3.434 10.522 2.94Z"
+          />
+        </svg>
+      </div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam in
+        laudantium neque, cumque quaerat inventore itaque et deleniti a.
+        Adipisci nulla saepe necessitatibus culpa laboriosam voluptate minima
+        ratione excepturi quo.
+      </p>
+    </article>
+    <main id="interactive-knight-tour">
+      <h2 class="title">Interactive tour</h2>
+      <form class="selectors">
+        <input
+          type="number"
+          class="board-size"
+          placeholder="Board Size"
+          min="5"
+          max="20"
+        />
+        <input type="submit" class="set-size" value="Set size" />
+        <input type="button" class="start" value="Start Tour" />
+      </form>
+      <div class="chessboard"></div>
+    </main>
 
-		<!-- Warnsdoff -->
-		<script src="scripts/index.js" type="module"></script>
-	</body>
+    <!-- Warnsdoff -->
+    <script src="scripts/index.js" type="module"></script>
+  </body>
 </html>
