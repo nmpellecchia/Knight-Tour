@@ -5,7 +5,7 @@ body {
   margin: 0;
   background: #050403;
   color: #ffeccc;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 svg {
@@ -111,6 +111,7 @@ h1,
 h2 {
   margin: 0;
   padding: 0;
+  font-family: 'Limelight', cursive;
 }
 
 /* class and id styling */
@@ -136,8 +137,10 @@ nav > ul {
 }
 
 li {
-  text-align: center;
-  padding: 0 0.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0.35rem;
 }
 
 li > a {
