@@ -17,7 +17,7 @@ svg {
 path {
   transform: scaleX(2);
   stroke: none;
-  fill: #ccbf59;
+  fill: #ccbf59bb;
   stroke-linecap: round;
 }
 
