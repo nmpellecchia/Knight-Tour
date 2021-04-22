@@ -108,7 +108,7 @@ article {
   grid-column: outer-start / inner-gap;
   grid-row: outer-start / outer-end;
   border: 1px solid green;
-  transform: /* translateY(50%) */ rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .deco-title .deco-inner-diamond {
