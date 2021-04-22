@@ -79,6 +79,62 @@ li > a {
   text-align: center;
 }
 
+/* Titles */
+
+article {
+  margin-left: 1rem;
+}
+
+.deco-title {
+  display: grid;
+  grid-template-columns:
+    [outer-start] 6px
+    [small-start] 50px
+    [small-end] 6px
+    [inner-gap] 1fr
+    [inner-end] 25px
+    [middle-end] 25px
+    [outer-end] 25px;
+  grid-template-rows:
+    [outer-start] 5px
+    [small-start] 30px
+    [inner-start] 10px
+    [inner-end] 10px
+    [small-end] 6px
+    [outer-end] 20px;
+}
+
+.deco-title .deco-outer-diamond {
+  grid-column: outer-start / inner-gap;
+  grid-row: outer-start / outer-end;
+  border: 1px solid green;
+  transform: /* translateY(50%) */ rotate(45deg);
+}
+
+.deco-title .deco-inner-diamond {
+  grid-column: small-start / small-end;
+  grid-row: small-start / small-end;
+  border: 1px dotted blue;
+}
+
+.deco-title .deco-text {
+  grid-column: inner-gap / outer-end;
+  grid-row: outer-start / inner-start;
+  border-bottom: 2px solid yellow;
+}
+
+.deco-title .deco-middle-line {
+  grid-column: inner-gap / middle-end;
+  grid-row: inner-start / inner-end;
+  border-bottom: 1px solid yellow;
+}
+
+.deco-title .deco-bottom-line {
+  grid-column: inner-gap / inner-end;
+  grid-row: small-end / outer-end;
+  border-top: 1px solid yellow;
+}
+
 /* Form */
 
 form.selectors {
