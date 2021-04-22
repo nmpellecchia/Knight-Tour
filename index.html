@@ -78,15 +78,31 @@
     <main id="interactive-knight-tour">
       <h2 class="title">Interactive tour</h2>
       <form class="selectors">
-        <input
-          type="number"
-          class="board-size"
-          placeholder="Board Size"
-          min="5"
-          max="20"
-        />
-        <input type="submit" class="set-size" value="Set size" />
-        <input type="button" class="start" value="Start Tour" />
+        <div class="input-deco-container">
+          <div class="deco-content">
+            <input
+              type="number"
+              class="board-size"
+              placeholder="Board Size"
+              min="5"
+              max="20"
+            />
+          </div>
+          <div class="deco-square-top-left"></div>
+          <div class="deco-square-bottom-left"></div>
+          <div class="deco-square-top-right"></div>
+          <div class="deco-square-bottom-right"></div>
+          <div class="deco-wide"></div>
+          <div class="deco-tallest"></div>
+        </div>
+        <button type="submit" class="set-size">
+          <div class="btn-inner-border"><p class="btn-txt">Set size</p></div>
+        </button>
+        <button type="button" class="start">
+          <div class="btn-inner-border"><p class="btn-txt">Start Tour</p></div>
+        </button>
+        <!-- <input type="submit" class="set-size" value="Set size" />
+        <input type="button" class="start" value="Start Tour" /> -->
       </form>
       <div class="chessboard"></div>
     </main>
