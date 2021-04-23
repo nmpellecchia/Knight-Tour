@@ -1,10 +1,10 @@
 html,
 body {
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   padding: 0;
   margin: 0;
-  background: #050403;
+  background: #0a0908;
   color: #ffeccc;
   font-family: 'Josefin Sans', sans-serif;
 }
@@ -31,11 +31,11 @@ h2 {
 }
 
 header {
-  height: 100%;
+  height: 100vh;
 }
 
 article {
-  height: 100%;
+  height: 100vh;
   margin-top: 2rem;
 }
 
