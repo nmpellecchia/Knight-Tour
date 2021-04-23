@@ -98,8 +98,13 @@ li > a {
 
 /* Titles */
 
-article {
+article .deco-title,
+main .deco-title {
   margin-left: 1rem;
+}
+
+h2 {
+  font-size: 1.3rem;
 }
 
 .deco-title {
@@ -150,6 +155,14 @@ article {
   grid-column: inner-gap / inner-end;
   grid-row: small-end / outer-end;
   border-top: 1px dashed var(--accent-color);
+}
+
+/* article paragraphs */
+
+article > p {
+  text-align: justify;
+  text-justify: inter-word;
+  padding: 0.5rem;
 }
 
 /* Form */
@@ -299,6 +312,7 @@ form.selectors {
 /* don't touch this */
 /* don't touch this */
 /* don't touch this */
+
 .chessboard {
   display: grid;
   justify-self: center;
@@ -308,6 +322,12 @@ form.selectors {
 #selected {
   background-color: #b96666 !important;
 }
+
+/* don't touch what's above this */
+/* don't touch what's above this */
+/* don't touch what's above this */
+/* don't touch what's above this */
+/* don't touch what's above this */
 
 /* Media Query */
 
