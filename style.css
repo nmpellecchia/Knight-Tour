@@ -3,14 +3,15 @@
   /* Color Palette */
   --base-black: #0a0908;
   --base-white: #dff8eb;
-  --light-shadow: #a28f9d;
+  --light-shadow: #d8c7d4;
   --dark-shadow: #74776b;
-  --ochre-color: #d17b0f;
-  --ochre-shadow: #a72608;
+  --gold-color: #ccbf0e;
+  --gold-shadow: #d17b0f;
+  --accent-color: #79cc0e;
+  --accent-shadow: #c91ad6;
   /* Fonts */
   --title-font: 'Limelight', cursive;
   --text-font: 'Josefin Sans', sans-serif;
-  --standard-font-size: 2rem;
 }
 
 html,
@@ -19,9 +20,9 @@ body {
   width: 100%;
   padding: 0;
   margin: 0;
-  background: #0a0908;
-  color: #ffeccc;
-  font-family: 'Josefin Sans', sans-serif;
+  background: var(--base-black);
+  color: var(--base-white);
+  font-family: var(--text-font);
 }
 
 /* Generic styles */
@@ -33,12 +34,11 @@ h2 {
   /* Change colors to appropiate palette */
   background: linear-gradient(
     to bottom,
-    #cfc09f 22%,
-    #634f2c 24%,
-    #cfc09f 26%,
-    #cfc09f 27%,
-    #ffecb3 40%,
-    #3a2c0f 78%
+    var(--base-white) 3%,
+    var(--gold-shadow) 22%,
+    var(--gold-color) 34%,
+    var(--base-white) 10%,
+    var(--gold-shadow) 80%
   );
   background-clip: text;
   -webkit-background-clip: text;
@@ -75,10 +75,9 @@ nav {
 }
 
 nav > ul {
-  background: #2b2a25;
+  background: var(--dark-shadow);
   display: flex;
   justify-content: flex-end;
-  font-size: 0.9rem;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -125,32 +124,32 @@ article {
 .deco-title .deco-outer-diamond {
   grid-column: outer-start / inner-gap;
   grid-row: outer-start / outer-end;
-  border: 1px solid green;
+  border: 1px solid var(--gold-color);
   transform: rotate(45deg);
 }
 
 .deco-title .deco-inner-diamond {
   grid-column: small-start / small-end;
   grid-row: small-start / small-end;
-  border: 1px dotted blue;
+  border: 1px dotted var(--accent-color);
 }
 
 .deco-title .deco-text {
   grid-column: inner-gap / outer-end;
   grid-row: outer-start / inner-start;
-  border-bottom: 2px solid yellow;
+  border-bottom: 2px dashed var(--gold-shadow);
 }
 
 .deco-title .deco-middle-line {
   grid-column: inner-gap / middle-end;
   grid-row: inner-start / inner-end;
-  border-bottom: 1px solid yellow;
+  border-bottom: 1px dashed var(--gold-color);
 }
 
 .deco-title .deco-bottom-line {
   grid-column: inner-gap / inner-end;
   grid-row: small-end / outer-end;
-  border-top: 1px solid yellow;
+  border-top: 1px dashed var(--accent-color);
 }
 
 /* Form */
@@ -167,8 +166,8 @@ form.selectors {
 /* Input decoration */
 
 .input-deco-container input {
-  color: white;
-  background: #000;
+  color: var(--base-white);
+  background: var(--base-black);
   height: 100%;
   width: 100%;
   border: none;
@@ -208,45 +207,45 @@ form.selectors {
 .input-deco-container .deco-square-top-left {
   grid-column: outer-start / inner-start;
   grid-row: outer-start / inner-start;
-  border: 1px solid white;
+  border: 1px solid var(--accent-shadow);
   /* transform: translateY(50%) rotate(45deg);  */ /* This order is important */
 }
 
 .input-deco-container .deco-square-bottom-left {
   grid-column: outer-start / inner-start;
   grid-row: inner-end / outer-end;
-  border: 1px solid white;
+  border: 1px solid var(--accent-shadow);
 }
 
 .input-deco-container .deco-square-top-right {
   grid-column: inner-end / outer-end;
   grid-row: outer-start / inner-start;
-  border: 1px solid white;
+  border: 1px solid var(--accent-shadow);
 }
 
 .input-deco-container .deco-square-bottom-right {
   grid-column: inner-end / outer-end;
   grid-row: inner-end / outer-end;
-  border: 1px solid white;
+  border: 1px solid var(--accent-shadow);
 }
 
 .input-deco-container .deco-wide {
   grid-column: middle-start / middle-end;
   grid-row: middle-start / middle-end;
-  border: 1px dashed cyan;
+  border: 1px solid var(--gold-color);
 }
 
 .input-deco-container .deco-tallest {
   grid-column: tallest-start / tallest-end;
   grid-row: tallest-start / tallest-end;
-  border: 1px dotted yellow;
+  border: 1px solid var(--gold-shadow);
 }
 
 /* buttons have a lot going on to make those borders */
 .selectors button {
   justify-self: center;
   width: 50%;
-  background: #ffffff;
+  background: var(--gold-color);
   border: none;
   padding: 0.3rem;
   clip-path: polygon(
@@ -259,12 +258,11 @@ form.selectors {
     0 88%,
     0 12%
   );
-  font-size: 0.7rem;
 }
 
 .btn-inner-border {
-  padding: 0.12rem;
-  background: #2b2a25;
+  padding: 0.4rem;
+  background: var(--base-black);
   clip-path: polygon(
     12% 0,
     88% 0,
@@ -278,9 +276,10 @@ form.selectors {
 }
 
 .btn-txt {
-  background: white;
+  background: var(--gold-color);
+  color: var(--base-black);
   margin: 0;
-  padding: 0.5rem;
+  padding: 0.3rem;
   clip-path: polygon(
     12% 0,
     88% 0,
