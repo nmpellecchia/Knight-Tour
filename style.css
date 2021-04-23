@@ -1,3 +1,4 @@
+html,
 body {
   height: 100%;
   width: 100%;
@@ -42,19 +43,34 @@ h2 {
   -webkit-text-fill-color: transparent;
 }
 
+header {
+  height: 100%;
+}
+
+article {
+  height: 100%;
+  margin-top: 2rem;
+}
+
 /* class and id styling */
 
 .bg-img {
   background-image: url(./img/chessboard-bg.jpeg);
   width: auto;
   height: 100%;
-  padding: 2rem;
   background-position: center;
   background-size: cover;
+  overflow: hidden;
   filter: grayscale(100%);
 }
 
 /* Navbar */
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
 
 nav > ul {
   background: #2b2a25;
