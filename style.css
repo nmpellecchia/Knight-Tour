@@ -9,19 +9,6 @@ body {
   font-family: 'Josefin Sans', sans-serif;
 }
 
-svg {
-  height: 3.5rem;
-  width: auto;
-  overflow: visible;
-}
-
-path {
-  transform: scaleX(2);
-  stroke: none;
-  fill: #ccbf59bb;
-  stroke-linecap: round;
-}
-
 /* Generic styles */
 h1,
 h2 {
