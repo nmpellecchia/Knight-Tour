@@ -158,7 +158,6 @@ form.selectors {
   display: grid;
   grid-template-columns: [input] 2fr [set-button] 1fr [start-button] 1fr;
   grid-template-rows: 5rem;
-  gap: 2rem;
   align-items: center;
   margin-bottom: 2rem;
 }
@@ -169,31 +168,33 @@ form.selectors {
   color: var(--base-white);
   background: var(--base-black);
   height: 100%;
-  width: 100%;
+  width: 90%;
   border: none;
 }
 
 .input-deco-container {
-  height: 100%;
+  height: 75%;
+
   display: grid;
   grid-template-columns:
-    [outer-start] 12px
-    [middle-start] 12px
-    [inner-start] 12px
+    [outer-start] 6px
+    [middle-start] 6px
+    [inner-start] 6px
     [tallest-start] 1fr
-    [tallest-end] 12px
-    [inner-end] 12px
-    [middle-end] 12px
-    [outer-end] 12px;
-  grid-template-rows:
-    [outer-start] 12px
-    [tallest-start] 6px
-    [middle-start]6px
-    [inner-start] 1fr
-    [inner-end] 6px
-    [middle-end] 12px
     [tallest-end] 6px
-    [outer-end] 12px;
+    [inner-end]6px
+    [middle-end] 6px
+    [outer-end] 6px;
+  grid-template-rows:
+    [outer-start] 6px
+    [tallest-start] 6px
+    [middle-start]3px
+    [inner-start] 1fr
+    [inner-end] 3px
+    [middle-end] 6px
+    [tallest-end] 6px
+    [outer-end] 6px;
+  margin-left: 0.5rem;
 }
 
 .input-deco-container .deco-content {
@@ -244,7 +245,8 @@ form.selectors {
 /* buttons have a lot going on to make those borders */
 .selectors button {
   justify-self: center;
-  width: 50%;
+  margin: 0.2rem;
+  width: 90%;
   background: var(--gold-color);
   border: none;
   padding: 0.3rem;
@@ -305,4 +307,41 @@ form.selectors {
 
 #selected {
   background-color: #b96666 !important;
+}
+
+/* Media Query */
+
+@media only screen and (min-device-width: 768px) {
+  form.selectors {
+    gap: 2rem;
+  }
+
+  .input-deco-container {
+    height: 100%;
+    display: grid;
+    grid-template-columns:
+      [outer-start] 12px
+      [middle-start] 12px
+      [inner-start] 12px
+      [tallest-start] 1fr
+      [tallest-end] 12px
+      [inner-end] 12px
+      [middle-end] 12px
+      [outer-end] 12px;
+    grid-template-rows:
+      [outer-start] 12px
+      [tallest-start] 6px
+      [middle-start]6px
+      [inner-start] 1fr
+      [inner-end] 6px
+      [middle-end] 12px
+      [tallest-end] 6px
+      [outer-end] 12px;
+    margin-left: 0;
+  }
+
+  /* Buttons */
+  .selectors button {
+    width: 50%;
+  }
 }
