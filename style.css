@@ -26,8 +26,8 @@ body {
 }
 
 /* Generic styles */
-h1,
-h2 {
+article h2,
+main h2 {
   margin: 0;
   padding: 0;
   font-family: 'Limelight', cursive;
@@ -64,6 +64,30 @@ article {
   background-size: cover;
   overflow: hidden;
   filter: grayscale(100%);
+  /* to align the title */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-title > h1 {
+  font-family: var(--title-font);
+  font-size: 3rem;
+  color: var(--base-black);
+  margin: 0.3rem;
+}
+
+.header-title > h2 {
+  font-family: var(--title-font);
+  font-size: 1.5rem;
+  color: var(--base-black);
 }
 
 /* Navbar */
