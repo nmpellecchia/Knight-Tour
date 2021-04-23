@@ -1,3 +1,18 @@
+/* Variables */
+:root {
+  /* Color Palette */
+  --base-black: #0a0908;
+  --base-white: #dff8eb;
+  --light-shadow: #a28f9d;
+  --dark-shadow: #74776b;
+  --ochre-color: #d17b0f;
+  --ochre-shadow: #a72608;
+  /* Fonts */
+  --title-font: 'Limelight', cursive;
+  --text-font: 'Josefin Sans', sans-serif;
+  --standard-font-size: 2rem;
+}
+
 html,
 body {
   min-height: 100%;
