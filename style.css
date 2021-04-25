@@ -36,10 +36,10 @@ h2 {
   /* Change colors to appropiate palette */
   background: linear-gradient(
     to bottom,
-    var(--base-white) 3%,
-    var(--gold-shadow) 22%,
-    var(--gold-color) 34%,
-    var(--base-white) 10%,
+    var(--gold-shadow) 20%,
+    var(--gold-color) 40%,
+    var(--base-white) 60%,
+    var(--gold-color) 70%,
     var(--gold-shadow) 80%
   );
   background-clip: text;
