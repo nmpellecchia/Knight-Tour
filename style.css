@@ -194,7 +194,7 @@ h2 {
 article > p {
   text-align: justify;
   text-justify: inter-word;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 /* Form */
@@ -364,6 +364,18 @@ form.selectors {
 /* Media Query */
 
 @media only screen and (min-device-width: 768px) {
+  /* Articles */
+
+  .deco-title {
+    width: 50%;
+  }
+
+  article > p {
+    padding: 3rem;
+  }
+
+  /* Selectors */
+
   form.selectors {
     gap: 2rem;
   }
