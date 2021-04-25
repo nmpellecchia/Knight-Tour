@@ -4,7 +4,7 @@
   --base-black: #0a0908;
   --base-white: #dff8eb;
   --light-shadow: #d8c7d4;
-  --dark-shadow: #74776b;
+  --dark-shadow: #393a36;
   --gold-color: #ccbf0e;
   --gold-shadow: #d17b0f;
   --accent-color: #79cc0e;
@@ -50,11 +50,12 @@ h2 {
 header {
   position: relative;
   height: 100vh;
+  margin-bottom: 2rem;
 }
 
 article {
   height: 100vh;
-  margin-top: 2rem;
+  padding-top: 2rem;
 }
 
 /* class and id styling */
@@ -111,7 +112,7 @@ nav > ul {
   display: flex;
   justify-content: flex-end;
   margin: 0;
-  padding: 0;
+  padding: 0.3rem;
   list-style: none;
 }
 
@@ -120,6 +121,7 @@ li {
   justify-content: center;
   align-items: center;
   padding: 0 0.35rem;
+  margin: 0 0.5rem;
 }
 
 li > a {
@@ -294,7 +296,7 @@ form.selectors {
   width: 90%;
   background: var(--gold-color);
   border: none;
-  padding: 0.3rem;
+  padding: 0.1rem;
   clip-path: polygon(
     12% 0,
     88% 0,
@@ -308,7 +310,7 @@ form.selectors {
 }
 
 .btn-inner-border {
-  padding: 0.4rem;
+  padding: 0.3rem;
   background: var(--base-black);
   clip-path: polygon(
     12% 0,
