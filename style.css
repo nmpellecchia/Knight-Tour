@@ -26,8 +26,10 @@ body {
 }
 
 /* Generic styles */
-article h2,
-main h2 {
+/* article h2,
+main h2 */
+h1,
+h2 {
   margin: 0;
   padding: 0;
   font-family: 'Limelight', cursive;
@@ -46,6 +48,7 @@ main h2 {
 }
 
 header {
+  position: relative;
   height: 100vh;
 }
 
@@ -57,13 +60,18 @@ article {
 /* class and id styling */
 
 .bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-image: url(./img/chessboard-bg.jpeg);
   width: auto;
   height: 100%;
   background-position: center;
   background-size: cover;
   overflow: hidden;
-  filter: grayscale(100%);
+  filter: grayscale(100%) blur(8px);
   /* to align the title */
   display: flex;
   justify-content: center;
@@ -71,6 +79,8 @@ article {
 }
 
 .header-title {
+  position: relative;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -78,16 +88,13 @@ article {
 }
 
 .header-title > h1 {
-  font-family: var(--title-font);
   font-size: 3rem;
-  color: var(--base-black);
+
   margin: 0.3rem;
 }
 
 .header-title > h2 {
-  font-family: var(--title-font);
   font-size: 1.5rem;
-  color: var(--base-black);
 }
 
 /* Navbar */
@@ -160,7 +167,7 @@ h2 {
 .deco-title .deco-inner-diamond {
   grid-column: small-start / small-end;
   grid-row: small-start / small-end;
-  border: 1px dotted var(--accent-color);
+  border: 1px dotted var(--accent-shadow);
 }
 
 .deco-title .deco-text {
