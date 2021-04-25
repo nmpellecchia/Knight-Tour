@@ -38,8 +38,8 @@ h2 {
     to bottom,
     var(--gold-shadow) 20%,
     var(--gold-color) 40%,
-    var(--base-white) 60%,
-    var(--gold-color) 70%,
+    var(--base-white) 50%,
+    var(--gold-color) 65%,
     var(--gold-shadow) 80%
   );
   background-clip: text;
@@ -88,13 +88,14 @@ article {
 }
 
 .header-title > h1 {
-  font-size: 3rem;
-
-  margin: 0.3rem;
+  font-size: 3.2rem;
+  /* margin: 0.3rem; */
+  -webkit-text-stroke: 1px var(--base-black);
 }
 
 .header-title > h2 {
   font-size: 1.5rem;
+  -webkit-text-stroke: 1px var(--base-black);
 }
 
 /* Navbar */
