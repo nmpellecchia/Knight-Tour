@@ -90,7 +90,6 @@ article {
 
 .header-title > h1 {
   font-size: 3.2rem;
-  /* margin: 0.3rem; */
   -webkit-text-stroke: 1px var(--base-black);
 }
 
@@ -102,6 +101,7 @@ article {
 /* Navbar */
 
 nav {
+  display: block;
   position: sticky;
   top: 0;
   z-index: 999;
@@ -112,15 +112,16 @@ nav > ul {
   display: flex;
   justify-content: flex-end;
   margin: 0;
-  padding: 0.3rem;
+  /* padding: 0.3rem; */
   list-style: none;
+  font-size: 0.7rem;
 }
 
 li {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 0.35rem;
+  /* padding: 0 0.35rem; */
   margin: 0 0.5rem;
 }
 
@@ -366,6 +367,16 @@ form.selectors {
 /* Media Query */
 
 @media only screen and (min-device-width: 768px) {
+  /* Nav */
+
+  nav > ul {
+    padding: 0.3rem;
+  }
+
+  li {
+    padding: 0 0.35rem;
+  }
+
   /* Articles */
 
   .deco-title {
