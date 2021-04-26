@@ -1,7 +1,7 @@
 function drawBoard(boardSize) {
   const board = document.querySelector('.chessboard');
   /* Change size according to the screen size so it doesn't overflow */
-  const sqSize = window.innerWidth < 450 ? 2.5 : 3;
+  const sqSize = window.innerWidth < 450 ? 2 : 3;
   //Remove all childs from the board, if not will cause display errors
   eraseBoard(board);
 
@@ -11,12 +11,12 @@ function drawBoard(boardSize) {
   for (let row = 0; row < boardSize; row++) {
     for (let column = 0; column < boardSize; column++) {
       const square = document.createElement('div');
-      square.classList.add(`sq${row}-${column}`);
+      square.classList.add('square', `sq${row}-${column}`);
 
       // When the sum of columns and rows is even the square is always white
       (row + column) % 2 == 0
-        ? (square.style.backgroundColor = '#DADADA') // "Light"
-        : (square.style.backgroundColor = '#BABABA'); // "Dark"
+        ? square.classList.add('light') // "Light"
+        : square.classList.add('dark'); // "Dark"
       // dynamic styling
       square.style.height = `${sqSize}rem`;
       square.style.width = `${sqSize}rem`;

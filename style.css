@@ -350,12 +350,20 @@ form.selectors {
 
 .chessboard {
   display: grid;
-  justify-self: center;
   margin: 1rem;
+  color: var(--base-black);
+}
+
+.chessboard .square.light {
+  background: var(--light-shadow);
+}
+
+.chessboard .square.dark {
+  background: var(--dark-shadow);
 }
 
 #selected {
-  background-color: #b96666 !important;
+  background-color: var(--accent-shadow) !important;
 }
 
 /* don't touch what's above this */
