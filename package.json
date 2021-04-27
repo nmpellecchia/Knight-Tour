@@ -1,0 +1,19 @@
+{
+  "name": "knight-tour",
+  "version": "1.0.0",
+  "description": "A knight's tour problem solver using a heuristic rule called Warnsdoff's rule.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nmpellecchia/Knight-Tour.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nmpellecchia/Knight-Tour/issues"
+  },
+  "homepage": "https://github.com/nmpellecchia/Knight-Tour#readme"
+}
