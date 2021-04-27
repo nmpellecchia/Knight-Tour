@@ -200,6 +200,13 @@ article > p {
   padding: 1rem;
 }
 
+/* Interactive part */
+
+main#interactive-knight-tour {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
 /* Form */
 
 form.selectors {
@@ -349,6 +356,7 @@ form.selectors {
 /* don't touch this */
 
 .chessboard {
+  justify-self: center;
   display: grid;
   margin: 1rem;
   color: var(--base-black);
@@ -393,6 +401,7 @@ form.selectors {
 
   article > p {
     padding: 3rem;
+    font-size: 1.5rem;
   }
 
   /* Selectors */
