@@ -3,85 +3,138 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&family=Limelight&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Knight Tour</title>
   </head>
   <body>
+    <nav>
+      <ul>
+        <li><a href="#">♞</a></li>
+        <li><a href="#knight-tour-explanation">What's a knight tour</a></li>
+        <li><a href="#warnsdoff-rule-explanation">Warnsdoff's rule</a></li>
+        <li><a href="#how-to-use">How to use</a></li>
+        <li><a href="#interactive-knight-tour">Try it</a></li>
+      </ul>
+    </nav>
     <header>
-      <div class="bg-img">
+      <div class="bg-img"></div>
+      <div class="header-title">
         <h1>Knight's Tour</h1>
         <h2>Using Warnsdoff's rule</h2>
       </div>
-      <nav>
-        <ul>
-          <li><a href="#">♞</a></li>
-          <li><a href="#knight-tour-explanation">What's a knight tour</a></li>
-          <li><a href="#warnsdoff-rule-explanation">Warnsdoff's rule</a></li>
-          <li><a href="#how-to-use">How to use</a></li>
-          <li><a href="#interactive-knight-tour">Try it</a></li>
-        </ul>
-      </nav>
     </header>
     <article id="knight-tour-explanation">
-      <div class="title">
-        <h2 class="title-txt">What's a Knight Tour</h2>
-        <svg viewbox="0 0 12 5">
-          <path
-            d="M0 0Q0 2 2.097 2.01L5.99 1.995C7.2502 1.9538 8.1795 1.4701 9.853 1.948Q11.212 2.226 11.382 3.88V5Q11.815 3.787 11.568 2.937Q11.274 2.118 10.146 1.562Q8.9815 1.1646 6.88 1.457Q4.397 1.686 2.081 1.608Q.54 1.686.133.349ZM10.963 3.442 10.53 4.076 9.996 3.434 10.522 2.94Z"
-          />
-        </svg>
+      <div class="deco-title">
+        <div class="deco-text">
+          <h2 class="title-txt">What's a Knight Tour</h2>
+        </div>
+        <div class="deco-outer-diamond"></div>
+        <div class="deco-inner-diamond"></div>
+        <div class="deco-middle-line"></div>
+        <div class="deco-bottom-line"></div>
       </div>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa eius,
-        eveniet, tempora aspernatur minima nam, quis a eaque commodi dolores
-        numquam dignissimos voluptates adipisci inventore voluptatem reiciendis
-        eos vero! Numquam!
+        A knight's tour is an ancient mathematical problem. In it, a single
+        knight has to visit every square on the chessboard exactly once. <br />
+        <br />
+        The tours can be closed, meaning that the last knight's move is just one
+        move away from it's initial position. Creating a loop. Or open, in these
+        cases the initial position is out of reach from the knight's last move.
+        <br />
+        <br />
+        In computer science, there are several ways to find a knight's tour.
+        Using a brute-force search, neural networks,etc. In this case, we'll use
+        what's called Warnsdoff's rule.
       </p>
     </article>
     <article id="warnsdoff-rule-explanation">
-      <div class="title">
-        <h2 class="title-txt">Warnsdoff's rule</h2>
-        <svg viewbox="0 0 12 5">
-          <path
-            d="M0 0Q0 2 2.097 2.01L5.99 1.995C7.2502 1.9538 8.1795 1.4701 9.853 1.948Q11.212 2.226 11.382 3.88V5Q11.815 3.787 11.568 2.937Q11.274 2.118 10.146 1.562Q8.9815 1.1646 6.88 1.457Q4.397 1.686 2.081 1.608Q.54 1.686.133.349ZM10.963 3.442 10.53 4.076 9.996 3.434 10.522 2.94Z"
-          />
-        </svg>
+      <div class="deco-title">
+        <div class="deco-text"><h2 class="title-txt">Warnsdoff's Rule</h2></div>
+        <div class="deco-outer-diamond"></div>
+        <div class="deco-inner-diamond"></div>
+        <div class="deco-middle-line"></div>
+        <div class="deco-bottom-line"></div>
       </div>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod explicabo
-        earum commodi dignissimos eaque ipsum nemo veniam, consequatur excepturi
-        a praesentium similique, sit aut distinctio sed totam. Laudantium, omnis
-        vitae?
+        This strategy is named after H. C. Von Warnsdoff, who proposed it in
+        1823.
+        <br />
+        <br />
+        It is an heuristic, that means, a technique whose objective is to find
+        and approximate solution faster than other methods, but it doesn't
+        guarantee that it will be optimal or perfect.
+        <br />
+        <br />
+        This rule states that the knight needs to choose, whenever possible, the
+        square with the lowest number of possible moves.
       </p>
     </article>
     <article id="how-to-use">
-      <div class="title">
-        <h2 class="title-txt">How to use</h2>
-        <svg viewbox="0 0 12 5">
-          <path
-            d="M0 0Q0 2 2.097 2.01L5.99 1.995C7.2502 1.9538 8.1795 1.4701 9.853 1.948Q11.212 2.226 11.382 3.88V5Q11.815 3.787 11.568 2.937Q11.274 2.118 10.146 1.562Q8.9815 1.1646 6.88 1.457Q4.397 1.686 2.081 1.608Q.54 1.686.133.349ZM10.963 3.442 10.53 4.076 9.996 3.434 10.522 2.94Z"
-          />
-        </svg>
+      <div class="deco-title">
+        <div class="deco-text"><h2 class="title-txt">How to use</h2></div>
+        <div class="deco-outer-diamond"></div>
+        <div class="deco-inner-diamond"></div>
+        <div class="deco-middle-line"></div>
+        <div class="deco-bottom-line"></div>
       </div>
       <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam in
-        laudantium neque, cumque quaerat inventore itaque et deleniti a.
-        Adipisci nulla saepe necessitatibus culpa laboriosam voluptate minima
-        ratione excepturi quo.
+        There's already a 8x8 board defined. If you want to try it inmediatly,
+        just press "Start". The knight will begin to move from the top left
+        corner and continue until it finishes the tour or no solution was found.
+        <br />
+        <br />
+        You can change the size of the board using the input on the left and
+        pressing "Set size". <br />
+        <br />The values must be between 5 and 20. The former because is the
+        first size a knight's tour is possible and the latter to avoid too much
+        strain on slower computers. <br />
+        <br />To change the starting position just click on any square and it
+        will be selected. <br />
+        <br />The tour will begin to solve itself using the heuristic algorithm.
+        You will get a message if no solution was found.
       </p>
     </article>
     <main id="interactive-knight-tour">
-      <h2 class="title">Interactive tour</h2>
+      <div class="deco-title">
+        <div class="deco-text">
+          <h2 class="title-txt">Interactive knight tour</h2>
+        </div>
+        <div class="deco-outer-diamond"></div>
+        <div class="deco-inner-diamond"></div>
+        <div class="deco-middle-line"></div>
+        <div class="deco-bottom-line"></div>
+      </div>
       <form class="selectors">
-        <input
-          type="number"
-          class="board-size"
-          placeholder="Board Size"
-          min="5"
-          max="20"
-        />
-        <input type="submit" class="set-size" value="Set size" />
-        <input type="button" class="start" value="Start Tour" />
+        <div class="input-deco-container">
+          <div class="deco-content">
+            <input
+              type="number"
+              class="board-size"
+              placeholder="Board Size"
+              min="5"
+              max="20"
+            />
+          </div>
+          <div class="deco-square-top-left"></div>
+          <div class="deco-square-bottom-left"></div>
+          <div class="deco-square-top-right"></div>
+          <div class="deco-square-bottom-right"></div>
+          <div class="deco-wide"></div>
+          <div class="deco-tallest"></div>
+        </div>
+        <button type="submit" class="set-size">
+          <div class="btn-inner-border"><p class="btn-txt">Set size</p></div>
+        </button>
+        <button type="button" class="start">
+          <div class="btn-inner-border"><p class="btn-txt">Start</p></div>
+        </button>
+        <!-- <input type="submit" class="set-size" value="Set size" />
+        <input type="button" class="start" value="Start Tour" /> -->
       </form>
       <div class="chessboard"></div>
     </main>
